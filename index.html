@@ -3,22 +3,38 @@
   <head>
     <meta charset="UTF-8" />
     <title>Handsontable Sample</title>
+    <script src="jquery-3.2.1.min.js"></script>
     <link rel="stylesheet" href="dist/handsontable.full.min.css" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
   </head>
   <body>
-
     <!-- https://www.tam-tam.co.jp/tipsnote/javascript/post11736.html -->
-    <p>マスタファイルを選択してください。</p>
-    <input type="file" name="file" id="file">
-    <div id="result"></div>
-    <HR />
-    <button id="search">search button</button>
-    <HR />
-    <!-- https://qiita.com/opengl-8080/items/ac19deec388c357cd498 -->
-    <div id="grid">
+    <div class="container-fluid">
+      <p></p>
+      <div class="input-group">
+        <label class="input-group-btn">
+            <span class="btn btn-primary">マスタデータ <span class="badge" id="masterdataCount">0</span>
+              <input type="file" id="file" style="display:none">
+            </span>
+        </label>
+      </div>      
+      <HR />
+      <div class="input-group">
+      <input type="text" class="form-control" placeholder="郵便番号か住所の一部を入力してください" id="searchword">
+      <span class="input-group-btn">
+        <button class="btn btn-default" id="search">
+          <i class='glyphicon glyphicon-search'></i>
+        </button>
+      </span>
+      </div>
+      <HR />
+      <!-- https://qiita.com/opengl-8080/items/ac19deec388c357cd498 -->
+      <div id="grid">
+      </div>
     </div>
     <script src="dist/handsontable.full.min.js"></script>
-    <script src="jquery-3.2.1.min.js"></script>
     <script src="app.js"></script>
   </body>
 </html>
